@@ -1,14 +1,15 @@
 import { useEffect, useState } from 'react'
 
+import axios from 'axios';
+
 function Starships() {
 
     const [ships, setShips] = useState([]);
     const [isloading, setIsLoading] = useState(true);
 
     useEffect(() => {
-        fetch("https://swapi.dev/api/starships/")
-            .then((res) => res.json())
-            //.then((data) => setShips(data))
+        axios("https://swapi.dev/api/starships/")
+            //.then((res) => setShips(res.data))
             .then((data) => console.log(data))
             .catch((e) => console.log(e))
             .finally(() => setIsLoading(false));
