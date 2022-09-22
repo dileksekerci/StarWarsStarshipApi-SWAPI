@@ -19,7 +19,7 @@ function Starships() {
             <h1>Starships</h1>
             {isloading && <div>Loading...</div>}
 
-            {/* {setShips.map((ship) => (
+            {/* {ships.map((ship) => (
                 <div key={ship.id}>{ship.name}</div>
             ))} */}
         </div>
