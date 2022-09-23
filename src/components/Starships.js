@@ -21,30 +21,32 @@ function Starships() {
             {loading && <div>Loading...</div>}
 
             <div className="card mb-3 card-style">
-                <div class="row g-0">
-                    <div class="col-md-4">
+                <div className="row g-0">
+                    <div className="col-md-4">
                         <img src='img/millenniumFalcon.png' alt='ship' className='img-fluid rounded-start' />
                     </div>
-                    <div class="col-md-8">
+                    <div className="col-md-8">
                         <div className="card-body">
                             <h5 className="card-title">Millennium Falcon</h5>
                             <p className="card-text">Model: ......</p>
                             <p className="card-text">Hper Drive: ..............</p>
+                            <button type="button" className="btn btn-warning">Detail</button>
                         </div>
                     </div>
                 </div>
             </div>
 
             <div className="card mb-3 card-style">
-                <div class="row g-0">
-                    <div class="col-md-4">
+                <div className="row g-0">
+                    <div className="col-md-4">
                         <img src='img/millenniumFalcon.png' alt='ship' className='img-fluid rounded-start' />
                     </div>
-                    <div class="col-md-8">
+                    <div className="col-md-8">
                         <div className="card-body">
                             <h5 className="card-title">Millennium Falcon</h5>
                             <p className="card-text">Model: ......</p>
                             <p className="card-text">Hper Drive: ..............</p>
+                            <button type="button" className="btn btn-warning">Detail</button>
                         </div>
                     </div>
                 </div>

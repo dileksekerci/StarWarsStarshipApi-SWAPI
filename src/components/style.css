@@ -11,3 +11,7 @@
     margin-left: auto;
     margin-right: auto;
 }
+
+.card-style:hover {
+    border-color: #FFC107;
+}
