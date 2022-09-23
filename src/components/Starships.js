@@ -1,6 +1,8 @@
 import { useEffect, useState } from 'react'
 import { Link } from "react-router-dom";
 import axios from 'axios';
+import './style.css'
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function Starships() {
 
@@ -16,27 +18,37 @@ function Starships() {
 
     return (
         <div>
-
             {loading && <div>Loading...</div>}
 
-
-            <div style={{ margin: `50px`, display: `flex`, flexDirection: `row`, justifyContent: `center` }}>
-                <div className="e-card e-card-horizontal" style={{ width: `400px` }}>
-                    <img src="img/millenniumFalcon.png" alt="Sample" style={{ height: `180px` }} />
-                    <div className="e-card-stacked">
-                        <div className="e-card-header">
-                            <div className="e-card-header-caption">
-                                <div className="e-card-header-title">Millennium Falcon</div>
-                            </div>
-                        </div>
-                        <div className="e-card-content">
-                            <p>Model: .........</p>
-                            <p>Hper-Drive: .........</p>
+            <div className="card mb-3 card-style">
+                <div class="row g-0">
+                    <div class="col-md-4">
+                        <img src='img/millenniumFalcon.png' alt='ship' className='img-fluid rounded-start' />
+                    </div>
+                    <div class="col-md-8">
+                        <div className="card-body">
+                            <h5 className="card-title">Millennium Falcon</h5>
+                            <p className="card-text">Model: ......</p>
+                            <p className="card-text">Hper Drive: ..............</p>
                         </div>
                     </div>
                 </div>
             </div>
 
+            <div className="card mb-3 card-style">
+                <div class="row g-0">
+                    <div class="col-md-4">
+                        <img src='img/millenniumFalcon.png' alt='ship' className='img-fluid rounded-start' />
+                    </div>
+                    <div class="col-md-8">
+                        <div className="card-body">
+                            <h5 className="card-title">Millennium Falcon</h5>
+                            <p className="card-text">Model: ......</p>
+                            <p className="card-text">Hper Drive: ..............</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <ul>
                 {/* {ship.map((ship) => (
                     <li key={ship.id}>
