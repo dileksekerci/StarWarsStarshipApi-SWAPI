@@ -16,8 +16,27 @@ function Starships() {
 
     return (
         <div>
-            <h1>Starships</h1>
+
             {loading && <div>Loading...</div>}
+
+
+            <div style={{ margin: `50px`, display: `flex`, flexDirection: `row`, justifyContent: `center` }}>
+                <div className="e-card e-card-horizontal" style={{ width: `400px` }}>
+                    <img src="img/millenniumFalcon.png" alt="Sample" style={{ height: `180px` }} />
+                    <div className="e-card-stacked">
+                        <div className="e-card-header">
+                            <div className="e-card-header-caption">
+                                <div className="e-card-header-title">Millennium Falcon</div>
+                            </div>
+                        </div>
+                        <div className="e-card-content">
+                            <p>Model: .........</p>
+                            <p>Hper-Drive: .........</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
             <ul>
                 {/* {ship.map((ship) => (
                     <li key={ship.id}>
@@ -27,7 +46,7 @@ function Starships() {
                     </li>
                 ))} */}
             </ul>
-        </div>
+        </div >
     );
 }
 

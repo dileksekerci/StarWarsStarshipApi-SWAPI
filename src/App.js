@@ -1,5 +1,6 @@
 import './App.css';
 import Starships from './components/Starships';
+import Header from './components/Header';
 import {
   BrowserRouter as Router,
   Switch,
@@ -9,7 +10,8 @@ import {
 
 function App() {
   return (
-    <div>
+    <div className='App'>
+      <Header />
       <Starships />
     </div>
   );
