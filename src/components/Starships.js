@@ -1,28 +1,32 @@
 import { useEffect, useState } from 'react'
-
+import { Link } from "react-router-dom";
 import axios from 'axios';
 
 function Starships() {
 
-    const [ships, setShips] = useState([]);
-    const [isloading, setIsLoading] = useState(true);
+    const [loading, setLoading] = useState(true);
+    const [ship, setShip] = useState([]);
 
     useEffect(() => {
         axios("https://swapi.dev/api/starships/")
-            //.then((res) => setShips(res.data))
+            //.then((res) => setShip(res.data))
             .then((data) => console.log(data))
-            .catch((e) => console.log(e))
-            .finally(() => setIsLoading(false));
+            .finally(() => setLoading(false));
     }, []);
 
     return (
         <div>
             <h1>Starships</h1>
-            {isloading && <div>Loading...</div>}
-
-            {/* {ships.map((ship) => (
-                <div key={ship.id}>{ship.name}</div>
-            ))} */}
+            {loading && <div>Loading...</div>}
+            <ul>
+                {/* {ship.map((ship) => (
+                    <li key={ship.id}>
+                        <Link to={`/ship/${ship.id}`}>
+                            {ship.name}
+                        </Link>
+                    </li>
+                ))} */}
+            </ul>
         </div>
     );
 }
