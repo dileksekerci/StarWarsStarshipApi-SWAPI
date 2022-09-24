@@ -6,30 +6,28 @@ import './style.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 function Starships() {
-    const [loading, setLoading] = useState(true);
-    const [ship, setShip] = useState([]);
 
-    useEffect(() => {
-        axios("https://swapi.dev/api/starships/")
-            //.then((res) => setShip(res.data.result))
-            .then((data) => console.log(data))
-            .finally(() => setLoading(false));
-    }, []);
+
+
+
 
     return (
         <div>
-            {loading && <div>Loading...</div>}
 
-            <div className="card mb-3 card-style">
+            <div className="search mt-4 mb-3">
+                <input type="text" name="search" className="writing-box" />
+            </div>
+
+            <div className="card mb-2 card-style">
                 <div className="row g-0">
                     <div className="col-md-4">
                         <img src='img/millenniumFalcon.png' alt='ship' className='img-fluid rounded-start mt-3' />
                     </div>
                     <div className="col-md-8">
                         <div className="card-body">
-                            <h5 className="card-title">Millennium Falcon</h5>
-                            <p className="card-text">Model: ......</p>
-                            <p className="card-text">Hper Drive: ..............</p>
+                            <h5 className="card-title">Name: Millennium Falcon</h5>
+                            <p className="card-text">Model: </p>
+                            <p className="card-text">Hyperdrive Rating: </p>
                             <button type="button" className="btn btn-warning">Detail</button>
                         </div>
                     </div>
@@ -43,23 +41,14 @@ function Starships() {
                     </div>
                     <div className="col-md-8">
                         <div className="card-body">
-                            <h5 className="card-title">Millennium Falcon</h5>
-                            <p className="card-text">Model: ......</p>
-                            <p className="card-text">Hper Drive: ..............</p>
+                            <h5 className="card-title">Name: Millennium Falcon</h5>
+                            <p className="card-text">Model: </p>
+                            <p className="card-text">Hyperdrive Rating: </p>
                             <button type="button" className="btn btn-warning">Detail</button>
                         </div>
                     </div>
                 </div>
             </div>
-            <ul>
-                {/* {ship.map((ship) => (
-                    <li key={ship.id}>
-                        <Link to={`/ship/${ship.id}`}>
-                            {ship.name}
-                        </Link>
-                    </li>
-                ))} */}
-            </ul>
         </div >
     );
 }
