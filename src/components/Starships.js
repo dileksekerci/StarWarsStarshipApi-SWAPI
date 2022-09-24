@@ -1,17 +1,17 @@
 import { useEffect, useState } from 'react'
 import { Link } from "react-router-dom";
 import axios from 'axios';
+
 import './style.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 function Starships() {
-
     const [loading, setLoading] = useState(true);
     const [ship, setShip] = useState([]);
 
     useEffect(() => {
         axios("https://swapi.dev/api/starships/")
-            //.then((res) => setShip(res.data))
+            //.then((res) => setShip(res.data.result))
             .then((data) => console.log(data))
             .finally(() => setLoading(false));
     }, []);
@@ -23,7 +23,7 @@ function Starships() {
             <div className="card mb-3 card-style">
                 <div className="row g-0">
                     <div className="col-md-4">
-                        <img src='img/millenniumFalcon.png' alt='ship' className='img-fluid rounded-start' />
+                        <img src='img/millenniumFalcon.png' alt='ship' className='img-fluid rounded-start mt-3' />
                     </div>
                     <div className="col-md-8">
                         <div className="card-body">
@@ -39,7 +39,7 @@ function Starships() {
             <div className="card mb-3 card-style">
                 <div className="row g-0">
                     <div className="col-md-4">
-                        <img src='img/millenniumFalcon.png' alt='ship' className='img-fluid rounded-start' />
+                        <img src='img/millenniumFalcon.png' alt='ship' className='img-fluid rounded-start mt-3' />
                     </div>
                     <div className="col-md-8">
                         <div className="card-body">

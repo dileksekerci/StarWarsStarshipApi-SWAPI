@@ -2,11 +2,11 @@
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 400px;
+    width: 50%;
 }
 
 .card-style {
-    max-width: 600px;
+    max-width: 60%;
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -14,4 +14,16 @@
 
 .card-style:hover {
     border-color: #FFC107;
+}
+
+.detail-img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+}
+
+.detail-card {
+    max-width: 90%;
+    border-color: #FFC107 !important;
 }
