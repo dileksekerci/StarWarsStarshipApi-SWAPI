@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { Link } from "react-router-dom";
+import { Outlet, Link } from "react-router-dom";
 import axios from 'axios';
 
 import './style.css'
@@ -18,22 +18,6 @@ function Starships() {
                 <input type="text" name="search" className="writing-box" />
             </div>
 
-            <div className="card mb-2 card-style">
-                <div className="row g-0">
-                    <div className="col-md-4">
-                        <img src='img/millenniumFalcon.png' alt='ship' className='img-fluid rounded-start mt-3' />
-                    </div>
-                    <div className="col-md-8">
-                        <div className="card-body">
-                            <h5 className="card-title">Name: Millennium Falcon</h5>
-                            <p className="card-text">Model: </p>
-                            <p className="card-text">Hyperdrive Rating: </p>
-                            <button type="button" className="btn btn-warning">Detail</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
             <div className="card mb-3 card-style">
                 <div className="row g-0">
                     <div className="col-md-4">
@@ -44,7 +28,7 @@ function Starships() {
                             <h5 className="card-title">Name: Millennium Falcon</h5>
                             <p className="card-text">Model: </p>
                             <p className="card-text">Hyperdrive Rating: </p>
-                            <button type="button" className="btn btn-warning">Detail</button>
+                            <Link to="/starshipDetails">Detail</Link>
                         </div>
                     </div>
                 </div>

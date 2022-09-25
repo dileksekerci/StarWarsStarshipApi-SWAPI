@@ -1,21 +1,24 @@
 import './App.css';
 import Header from './components/Header';
 import Starships from './components/Starships';
-import Starship from './components/Starship';
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link
-} from "react-router-dom";
+import StarshipDetail from './components/StarshipDetail';
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import NoPage from './components/Nopage';
 
 function App() {
   return (
-    <div className='App'>
-      <Header />
-      <Starships />
-      <Starship />
-    </div>
+    <Router>
+      <div className='App'>
+        <Header />
+        <div className='content'>
+          <Routes>
+            <Route path='/' element={<Starships />} />
+            <Route path='/starshipDetails' element={<StarshipDetail />} />
+            <Route path='*' element={<NoPage />} />
+          </Routes>
+        </div>
+      </div>
+    </Router >
   );
 }
 
