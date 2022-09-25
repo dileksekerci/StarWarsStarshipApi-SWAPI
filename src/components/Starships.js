@@ -2,6 +2,8 @@ import { useEffect, useState } from 'react'
 import { Link } from "react-router-dom";
 import axios from 'axios';
 
+import Search from './Search';
+
 import './style.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -58,6 +60,7 @@ function Starships() {
 
     return (
         <>
+            <Search />
             {starshipCardList}
             {/* <button onClick={loadMoreShips}>{</button> */}
         </>
