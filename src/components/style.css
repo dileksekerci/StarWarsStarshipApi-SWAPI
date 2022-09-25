@@ -32,6 +32,7 @@
 
 .card-style:hover {
     border-color: #FFC107;
+    background-color: #FFFFF0;
 }
 
 .detail-img {
@@ -44,4 +45,8 @@
 .detail-card {
     max-width: 100%;
     margin: auto;
+}
+
+.img-size {
+    width: 60%;
 }

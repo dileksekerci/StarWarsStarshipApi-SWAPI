@@ -1,14 +1,11 @@
 import { useEffect, useState } from 'react'
-import { Outlet, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import axios from 'axios';
 
 import './style.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-function StarshipDetail() {
-
-
-
+function Starship() {
 
 
     return (
@@ -30,7 +27,7 @@ function StarshipDetail() {
                     <p className="card-text">Crew: </p>
                     <p className="card-text">Cargo Capacity: </p>
                     <div className="card-footer bg-transparent border-warning">
-                        <Link to="/">Home</Link>
+                        <Link to="/" type="button" className="btn btn-warning">Home</Link>
                     </div>
                 </div>
             </div>
@@ -39,4 +36,4 @@ function StarshipDetail() {
     )
 }
 
-export default StarshipDetail;
+export default Starship;
