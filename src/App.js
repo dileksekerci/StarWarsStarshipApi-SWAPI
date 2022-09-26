@@ -1,7 +1,7 @@
 import './App.css';
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Header from './components/Header';
 import StarshipDetail from './components/StarshipDetail';
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import NoPage from './components/Nopage';
 import LoadMore from './components/LoadMore';
 
@@ -13,7 +13,7 @@ function App() {
         <div className='content'>
           <Routes>
             <Route path='/' element={<LoadMore />} />
-            <Route path='/starshipDetails' element={<StarshipDetail />} />
+            <Route path='/starships/:shipId' element={<StarshipDetail />} />
             <Route path='*' element={<NoPage />} />
           </Routes>
         </div>
