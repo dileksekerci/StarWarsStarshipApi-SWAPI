@@ -1,11 +1,25 @@
 import React from 'react'
 import './style.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { useState } from 'react';
+import PrepareData from './PrepareData';
+
 
 function Search() {
+    const [criteria, setCriteria] = useState([]);
+
+    PrepareData(criteria);
+
     return (
         <div className="search mt-4 mb-3">
-            <input placeholder="Name or Model" type="text" name="search" className="writing-box" />
+            <input placeholder="Name or Model"
+                type="text"
+                name="search"
+                className="writing-box"
+                autoComplete='off'
+                onChange={e => setCriteria(e.target.value)}
+                value={criteria} />
+            {/* if this event trigerred our hooks catch it and set a criteria */}
         </div>
     )
 }

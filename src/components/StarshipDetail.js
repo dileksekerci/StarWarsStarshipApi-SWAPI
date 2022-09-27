@@ -1,5 +1,5 @@
 import { useLocation, useParams, Link } from "react-router-dom";
-import LoadMore from "./LoadMore";
+import PrepareData from "./PrepareData";
 import Starships from "./Starships";
 import './style.css'
 import 'bootstrap/dist/css/bootstrap.min.css';

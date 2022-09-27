@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 
 import axios from 'axios';
 
@@ -6,14 +6,17 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './style.css'
 
 import Starships from './Starships';
+import Search from './Search';
 
-function LoadMore() {
+
+function PrepareData(props) {
     const shipsCountForLoad = 5;
 
     const [starships, setStarships] = useState("");
     const [isLoading, setIsLoading] = useState(false);
     const [loaded, setLoaded] = useState(shipsCountForLoad);
-
+    const [isSearching, SetIsSearching] = useState(false);
+    const [criteria, SetCriteria] = useState('');
 
     useEffect(() => {
         const getData = async () => {
@@ -34,8 +37,19 @@ function LoadMore() {
             }
         };
         getData();
+
+
     }, []);
 
+    if (typeof (props) != 'object') {
+        if (props != criteria) {
+            SetCriteria(props);
+            console.log(criteria);
+        } else {
+
+        }
+
+    }
 
     let starshipCardList = Array.from(starships);
     starshipCardList = starshipCardList.map((ship, id) =>
@@ -56,22 +70,26 @@ function LoadMore() {
 
     const load = () => {
         setLoaded(loaded + shipsCountForLoad);
+
     };
 
 
     return (
         <div>
-            {starshipCardList.slice(0, loaded)}
+            {isLoading ? 'Loading...' : ''}
+            {/* {isSearching ?
+                props : starshipCardList.slice(0, loaded)
+            } */}
+
+
             {loaded < starshipCardList.length ?
                 <button onClick={load} className="card mb-3 card-style">
                     {isLoading ? 'Loading...' : 'Load More'}
                 </button> :
                 <></>
             }
-
-
         </div >
     );
 }
 
-export default LoadMore;
+export default PrepareData;
