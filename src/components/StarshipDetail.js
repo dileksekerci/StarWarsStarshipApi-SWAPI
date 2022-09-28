@@ -1,6 +1,5 @@
 import { useLocation, useParams, Link } from "react-router-dom";
-import PrepareData from "./PrepareData";
-import Starships from "./Starships";
+
 import './style.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
 

@@ -36,7 +36,7 @@ function Starships(props) {
                         </div>
                     </div>
                 </div>
-            </div >
+            </div>
         </>
     );
 }

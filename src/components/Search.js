@@ -1,8 +1,9 @@
 import React from 'react'
-import './style.css'
-import 'bootstrap/dist/css/bootstrap.min.css';
 import { useState } from 'react';
 import PrepareData from './PrepareData';
+
+import './style.css'
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 function Search() {

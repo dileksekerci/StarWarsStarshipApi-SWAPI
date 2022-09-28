@@ -12,8 +12,8 @@ export default function NotFound() {
                 <img src="../img/yoda.png" alt="404" />
             </div>
             <div className="card-body">
-                <Link to='/' type="button" className="btn btn-outline-warning">Home</Link>
-                <h3>may the force be with you </h3>
+                <Link to='/' type="button" className="btn btn-outline-warning mb-3">Home</Link>
+                <h3>=May The Force Be With You=</h3>
             </div>
         </div>
     )
