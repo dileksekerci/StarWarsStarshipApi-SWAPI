@@ -11,7 +11,7 @@ function Search() {
     PrepareData(criteria);
 
     return (
-        <div className="search mt-4 mb-3">
+        <div className="search mt-3 mb-3">
             <input placeholder="Name or Model"
                 type="text"
                 name="search"

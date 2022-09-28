@@ -10,7 +10,7 @@ import Search from './Search';
 
 
 function PrepareData(props) {
-    const shipsCountForLoad = 5;
+    const shipsCountForLoad = 5;//how many ship card load for every loadmore click
 
     const [starships, setStarships] = useState("");
     const [isLoading, setIsLoading] = useState(false);
@@ -41,15 +41,15 @@ function PrepareData(props) {
 
     }, []);
 
-    if (typeof (props) != 'object') {
-        if (props != criteria) {
-            SetCriteria(props);
-            console.log(criteria);
-        } else {
+    // if (typeof (props) != 'object') {
+    //     if (props != criteria) {
+    //         SetCriteria(props);
+    //         console.log(criteria);
+    //     } else {
 
-        }
+    //     }
 
-    }
+    // }
 
     let starshipCardList = Array.from(starships);
     starshipCardList = starshipCardList.map((ship, id) =>
@@ -78,10 +78,10 @@ function PrepareData(props) {
         <div>
             {isLoading ? 'Loading...' : ''}
             {/* {isSearching ?
-                props : starshipCardList.slice(0, loaded)
+                props : 
             } */}
 
-
+            {starshipCardList.slice(0, loaded)}
             {loaded < starshipCardList.length ?
                 <button onClick={load} className="card mb-3 card-style">
                     {isLoading ? 'Loading...' : 'Load More'}
