@@ -1,7 +1,20 @@
-import React from 'react'
+import { Link } from "react-router-dom";
+import 'bootstrap/dist/css/bootstrap.min.css';
+import './style.css'
 
-const NoPage = () => {
-    return <h1>404</h1>;
-};
-
-export default NoPage;
+export default function NotFound() {
+    return (
+        <div className="card detail-card">
+            <div className="card-header bg-transparent ">
+                <h1>Oops! You lost seem to be.</h1>
+            </div>
+            <div className="img-size">
+                <img src="../img/yoda.png" alt="404" />
+            </div>
+            <div className="card-body">
+                <Link to='/' type="button" className="btn btn-outline-warning">Home</Link>
+                <h3>may the force be with you </h3>
+            </div>
+        </div>
+    )
+}
