@@ -16,8 +16,8 @@ import Search from './components/Search';
 export const Themecontext = createContext(null);
 
 function App() {
+  // dark-light mode
   const [theme, setTheme] = useState("light");
-
   const toggleTheme = () => {
     setTheme((curr) => (curr === "light" ? "dark" : "light"));
   }
@@ -47,6 +47,13 @@ function App() {
               <Route path='*' element={<NoPage />} />
             </Routes>
           </div>
+          {/*scroll to top on button click*/}
+          <button className='topScroll' onClick={() => {
+            window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
+          }}>
+            &#129153;
+          </button>
+
         </div>
       </Router >
     </Themecontext.Provider>
