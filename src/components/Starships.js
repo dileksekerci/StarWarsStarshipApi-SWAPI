@@ -7,7 +7,7 @@ function Starships(props) {
     return (
         <>
             <div key={props.shipId}>
-                <div className="card mb-3 card-style">
+                <div className="card mt-3 card-style">
                     <div className="row g-0">
                         <div className="col-md-4">
                             <img src={'/img/shipsImages/' + props.shipId + '.png'}
@@ -20,7 +20,7 @@ function Starships(props) {
                                 <p className="card-text">Model: {props.model}</p>
                                 <p className="card-text">Hyperdrive Rating: {props.hyperdrive_rating}</p>
                                 <Link id={props.shipId} type="button"
-                                    className="btn btn-warning"
+                                    className="btn btn-outline-warning"
                                     to={`/starships/${props.shipId}`}
                                     state={`${props.name}, 
                                     ${props.model},

@@ -1,3 +1,4 @@
+/* Header.js */
 .logo {
     display: block;
     margin-left: auto;
@@ -5,14 +6,53 @@
     width: 30%;
 }
 
+
+/* App.js */
 #light {
-    background-color: #ffffff;
+    background-color: #f3f5f3;
+    background-image: url(./../../public/img/luke.png);
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-attachment: scroll;
 }
 
 #dark {
-    background-color: #303030;
+    background-color: #202020;
+    background-image: url(./../../public/img/anakin.png);
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-attachment: scroll;
 }
 
+.switch {
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    width: 20%;
+    z-index: 1;
+}
+
+.switch label {
+    margin: 3px;
+}
+
+#light .switch label {
+    color: black;
+}
+
+#dark .switch label {
+    color: white;
+}
+
+.theme-img {
+    width: 30px;
+    margin: auto;
+}
+
+
+/* Search.js */
 .writing-box {
     text-align: left;
     width: 90%;
@@ -21,21 +61,13 @@
 }
 
 #light .writing-box {
-    background-color: #ffffff;
+    background-color: #f7fcf6;
     color: black;
 }
 
 #dark .writing-box {
-    background-color: #4f4e4e;
+    background-color: #404040;
     color: white;
-}
-
-#light .search {
-    background-color: #ffffff;
-}
-
-#dark .search {
-    background-color: #4f4e4e;
 }
 
 .search {
@@ -50,46 +82,49 @@
 }
 
 #light .search {
-    background-color: #ffffff;
+    background-color: #f7fcf6;
 }
 
 #dark .search {
-    background-color: #4f4e4e;
+    background-color: #404040;
 }
 
+
+/* Starships.js */
 .card-style {
     max-width: 50%;
     display: block;
     margin-left: auto;
     margin-right: auto;
-    background-color: #f6f6f6 !important;
 }
 
 #light .card-style {
-    background-color: #f6f6f6 !important;
+    background-color: #f7fcf6 !important;
 
 }
 
 #dark .card-style {
-    background-color: #4f4e4e !important;
+    background-color: #404040 !important;
+    border-color: #616161;
     color: #fff;
 }
 
 #light .card-style:hover {
     max-width: 52%;
     border-color: #FFC107;
-    background-color: #FFFFF0 !important;
-    box-shadow: 6px 3px 0px 0px rgba(239, 239, 4, 0.301);
+    background-color: #e6f9e5 !important;
+    box-shadow: 3px 2px 10px 3px rgba(3, 254, 3, 0.195);
 }
 
 #dark .card-style:hover {
     max-width: 52%;
-    border-color: #6f5401;
-    background-color: #2f2f23 !important;
-    box-shadow: 6px 3px 0px 0px rgba(81, 81, 1, 0.301);
+    border-color: #3e3939;
+    background-color: #2f2323 !important;
+    box-shadow: 3px 2px 10px 3px rgba(254, 3, 3, 0.195);
 }
 
 
+/* StarshipDetail.js */
 .detail-img {
     display: block;
     margin-left: auto;
@@ -98,42 +133,25 @@
 }
 
 .detail-card {
-    max-width: 100%;
-    margin: auto;
-    background-color: #f6f6f6 !important;
-    box-shadow: 6px 3px 0px 0px rgba(239, 239, 4, 0.301);
+    max-width: 50%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 #light .detail-card {
-    background-color: #f6f6f6 !important;
-
+    background-color: #f7fcf6 !important;
+    color: black;
+    box-shadow: 3px 2px 10px 5px rgba(3, 254, 3, 0.195);
 }
 
 #dark .detail-card {
-    background-color: #4f4e4e !important;
+    background-color: #404040 !important;
+    border-color: #616161;
     color: #fff;
-    border-color: #6f5401;
-    box-shadow: 6px 3px 0px 0px rgba(81, 81, 1, 0.301);
+    box-shadow: 3px 2px 10px 5px rgba(254, 3, 3, 0.195);
 }
 
 .img-size {
     width: 60%;
-}
-
-.switch {
-    display: flex;
-    width: 100%;
-    justify-content: center;
-}
-
-.switch label {
-    margin-right: 10px;
-}
-
-.light .switch label {
-    color: black;
-}
-
-.dark .switch label {
-    color: white;
 }

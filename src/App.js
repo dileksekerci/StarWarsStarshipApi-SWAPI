@@ -1,7 +1,9 @@
 import './App.css';
 import './components/style.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 import { createContext } from 'react';
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import ReactSwitch from 'react-switch';
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
@@ -24,11 +26,19 @@ function App() {
     <Themecontext.Provider value={{ theme, toggleTheme }}>
       <Router>
         <div className='App' id={theme}>
-          <Header />
           <div className='switch'>
-            <label>{theme === "light" ? " Light Side" : "Dark Side"} </label>
+            <label className='ms-2 mb-3'>
+              {theme === "light" ?
+                <img className="theme-img" src="../img/light.png" /> :
+                <img className="theme-img" src="../img/dark.png" />
+              }
+            </label>
+            <label>
+              {theme === "light" ? "Light Side" : "Dark Side"}
+            </label>
             <ReactSwitch onChange={toggleTheme} checked={theme === "light"} />
           </div>
+          <Header />
           <Search />
           <div className='content'>
             <Routes>

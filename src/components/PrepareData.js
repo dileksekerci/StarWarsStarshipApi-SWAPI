@@ -83,12 +83,12 @@ function PrepareData(props) {
 
             {starshipCardList.slice(0, loaded)}
             {loaded < starshipCardList.length ?
-                <button onClick={load} className="card mb-3 card-style">
+                <button onClick={load} className="btn btn-outline-secondary mt-2">
                     {isLoading ? 'Loading...' : 'Load More'}
                 </button> :
-                <></>
+                ""
             }
-        </div >
+        </div>
     );
 }
 
