@@ -4,7 +4,6 @@ import './style.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 function Starship() {
-    const { shipId } = useParams();
     const location = useLocation();
     const shipInfo = location.state.split(',');
 
@@ -16,7 +15,7 @@ function Starship() {
                 </div>
                 {/* The id from useParams is captured and the appropriate image appears on the detail page. */}
                 <div>
-                    <img src={'/img/shipsImages/' + shipId + '.png'}
+                    <img src={'/img/shipsImages/' + shipInfo[0] + '.png'}
                         alt='starship'
                         className='detail-img mt-3 mb-3' />
                 </div>

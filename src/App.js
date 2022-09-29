@@ -10,8 +10,7 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Header from './components/Header';
 import StarshipDetail from './components/StarshipDetail';
 import NoPage from './components/Nopage';
-import PrepareData from './components/PrepareData';
-import Search from './components/Search';
+import SearchAndList from './components/SearchAndList';
 
 export const Themecontext = createContext(null);
 
@@ -43,10 +42,9 @@ function App() {
 
           {/*The section where pages are called with route*/}
           <Header />
-          <Search />
           <div className='content'>
             <Routes>
-              <Route path='/' element={<PrepareData />} />
+              <Route path='/' element={<SearchAndList />} />
               <Route path='/starships/:shipId' element={<StarshipDetail />} />
               <Route path='*' element={<NoPage />} />
             </Routes>

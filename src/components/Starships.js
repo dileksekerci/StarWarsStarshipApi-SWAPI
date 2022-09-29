@@ -12,7 +12,7 @@ function Starships(props) {
                     <div className="row g-0">
                         {/* pictures were taken from local folder by naming them according to id */}
                         <div className="col-md-4">
-                            <img src={'/img/shipsImages/' + props.shipId + '.png'}
+                            <img src={'/img/shipsImages/' + props.name + '.png'}
                                 alt='starship'
                                 className='img-size rounded-start mt-3' />
                         </div>
