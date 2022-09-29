@@ -26,6 +26,8 @@ function App() {
     <Themecontext.Provider value={{ theme, toggleTheme }}>
       <Router>
         <div className='App' id={theme}>
+
+          {/*dark theme light theme selection and the section with appropriate text and pictures*/}
           <div className='switch'>
             <label className='ms-2 mb-3'>
               {theme === "light" ?
@@ -38,6 +40,8 @@ function App() {
             </label>
             <ReactSwitch onChange={toggleTheme} checked={theme === "light"} />
           </div>
+
+          {/*The section where pages are called with route*/}
           <Header />
           <Search />
           <div className='content'>
@@ -47,6 +51,7 @@ function App() {
               <Route path='*' element={<NoPage />} />
             </Routes>
           </div>
+
           {/*scroll to top on button click*/}
           <button className='topScroll' onClick={() => {
             window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });

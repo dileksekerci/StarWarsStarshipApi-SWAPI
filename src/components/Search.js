@@ -13,6 +13,7 @@ function Search() {
 
     return (
         <div className="search mt-3 mb-3">
+            {/* search component created */}
             <input placeholder="Name or Model"
                 type="text"
                 name="search"

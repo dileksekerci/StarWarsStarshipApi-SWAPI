@@ -4,6 +4,7 @@ import './style.css'
 
 export default function NotFound() {
     return (
+        /*404 not found error page*/
         <div className="card detail-card">
             <div className="card-header bg-transparent ">
                 <h1>Oops! You lost seem to be.</h1>

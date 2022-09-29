@@ -1,4 +1,4 @@
-/* Header.js */
+/* Header.js syles*/
 .logo {
     display: block;
     margin-left: auto;
@@ -7,7 +7,7 @@
 }
 
 
-/* App.js */
+/* App.js light - dark theme*/
 #light {
     background-color: #f3f5f3;
     background-image: url(./../../public/img/luke.png);
@@ -52,7 +52,7 @@
 }
 
 
-/* Search.js */
+/* Search.js syles and light - dark theme*/
 .writing-box {
     text-align: left;
     width: 90%;
@@ -90,7 +90,7 @@
 }
 
 
-/* Starships.js */
+/* Starships.js syles and light - dark theme*/
 .card-style {
     max-width: 50%;
     display: block;
@@ -124,7 +124,7 @@
 }
 
 
-/* StarshipDetail.js */
+/* StarshipDetail.js  syles and light - dark theme*/
 .detail-img {
     display: block;
     margin-left: auto;

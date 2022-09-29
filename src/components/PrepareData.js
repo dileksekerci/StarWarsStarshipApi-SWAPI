@@ -5,8 +5,6 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './style.css'
 
 import Starships from './Starships';
-import Search from './Search';
-
 
 function PrepareData(props) {
     const shipsCountForLoad = 5;//how many ship card load for every loadmore click
@@ -14,9 +12,9 @@ function PrepareData(props) {
     const [starships, setStarships] = useState("");
     const [isLoading, setIsLoading] = useState(false);
     const [loaded, setLoaded] = useState(shipsCountForLoad);
-    const [isSearching, SetIsSearching] = useState(false);
-    const [criteria, SetCriteria] = useState('');
 
+    // Starships data were pulled from the pages in the api with Axios.
+    //Problems that may occur with try - catch have been resolved.
     useEffect(() => {
         const getData = async () => {
             try {
@@ -36,20 +34,9 @@ function PrepareData(props) {
             }
         };
         getData();
-
-
     }, []);
 
-    // if (typeof (props) != 'object') {
-    //     if (props != criteria) {
-    //         SetCriteria(props);
-    //         console.log(criteria);
-    //     } else {
-
-    //     }
-
-    // }
-
+    // Data from api sent to Starships page
     let starshipCardList = Array.from(starships);
     starshipCardList = starshipCardList.map((ship, id) =>
         <Starships
@@ -65,27 +52,20 @@ function PrepareData(props) {
             cargo_capacity={ship.cargo_capacity}
         />
     );
-
-
     const load = () => {
         setLoaded(loaded + shipsCountForLoad);
-
     };
 
 
     return (
         <div>
             {isLoading ? 'Loading...' : ''}
-            {/* {isSearching ?
-                props : 
-            } */}
-
             {starshipCardList.slice(0, loaded)}
             {loaded < starshipCardList.length ?
-                <button onClick={load} className="btn btn-outline-secondary mt-2">
+                <button onClick={load} className="btn btn-outline-secondary my-3">
                     {isLoading ? 'Loading...' : 'Load More'}
                 </button> :
-                ""
+                <p>&nbsp;</p>
             }
         </div>
     );
