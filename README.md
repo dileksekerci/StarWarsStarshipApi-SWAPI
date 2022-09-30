@@ -30,6 +30,6 @@ Planets, Spaceships, Vehicles, People, Films and Species
 
 
 # Demo
- ![Screenshot](./public/img/Screenshot/Screenshot.mp4)
+ ![Screenshot](./public/img/Screenshot/Screenshot.gif)
 
 
