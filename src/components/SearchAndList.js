@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import Starships from './Starships';
 import axios from 'axios';
 
+import './style.css'
 
 function Searcher() {
     const shipsCountForLoad = 5;//how many ship card load for every loadmore click
@@ -94,8 +95,7 @@ function Searcher() {
                         <button onClick={load} className="btn btn-outline-secondary my-3">
                             {isLoading ? 'Loading...' : 'Load More'}
                         </button> :
-                        ""
-                        // <p>&nbsp;</p>
+                        " "
                     }{/*slice starshipcard array every load more button clicks*/}
                 </div >
 
@@ -118,22 +118,24 @@ function Searcher() {
                     </div>
                 </div>
 
-                <div className="dataResult">
+                <div>
                     {filteredData.slice(0, 36).map((ship, key) => {
                         {/*show starshipcards only filtered data*/ }
                         return (
-                            <Starships
-                                id={key}
-                                shipId={ship.name}
-                                name={ship.name}
-                                model={ship.model}
-                                hyperdrive_rating={ship.hyperdrive_rating}
-                                passengers={ship.passengers}
-                                max_atmosphering_speed={ship.max_atmosphering_speed}
-                                manufacturer={ship.manufacturer}
-                                crew={ship.crew}
-                                cargo_capacity={ship.cargo_capacity}
-                            />
+                            <div>
+                                <Starships
+                                    id={key}
+                                    shipId={ship.name}
+                                    name={ship.name}
+                                    model={ship.model}
+                                    hyperdrive_rating={ship.hyperdrive_rating}
+                                    passengers={ship.passengers}
+                                    max_atmosphering_speed={ship.max_atmosphering_speed}
+                                    manufacturer={ship.manufacturer}
+                                    crew={ship.crew}
+                                    cargo_capacity={ship.cargo_capacity}
+                                />
+                            </div>
                         );
                     })}
                 </div>

@@ -52,7 +52,7 @@
 }
 
 
-/* Search.js syles and light - dark theme*/
+/* SearchAndList.js syles and light - dark theme*/
 .writing-box {
     text-align: left;
     width: 90%;
@@ -91,6 +91,11 @@
 
 
 /* Starships.js syles and light - dark theme*/
+.card-wrap {
+    overflow-y: scroll;
+    display: flex;
+}
+
 .card-style {
     max-width: 50%;
     display: block;
