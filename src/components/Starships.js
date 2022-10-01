@@ -10,7 +10,7 @@ function Starships(props) {
             <div key={props.shipId}>
                 <div className="card mt-3 card-style">
                     <div className="row g-0">
-                        {/* pictures were taken from local folder by naming them according to id */}
+                        {/* pictures were taken from local folder by naming them according to ship name */}
                         <div className="col-md-4">
                             <img src={'/img/shipsImages/' + props.name + '.png'}
                                 alt='starship'

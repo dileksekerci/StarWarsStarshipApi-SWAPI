@@ -1,9 +1,9 @@
-import { useLocation, useParams, Link } from "react-router-dom";
+import { useLocation, Link } from "react-router-dom";
 
 import './style.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-function Starship() {
+function StarshipDetail() {
     const location = useLocation();
     const shipInfo = location.state.split(',');
 
@@ -40,4 +40,4 @@ function Starship() {
     )
 }
 
-export default Starship;
+export default StarshipDetail;

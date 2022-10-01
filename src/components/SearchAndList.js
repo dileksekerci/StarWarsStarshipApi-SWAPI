@@ -13,22 +13,6 @@ function Searcher() {
     const [filteredData, setFilteredData] = useState([]);//which ships founded
     const [wordEntered, setWordEntered] = useState("");//search box value
 
-    const handleFilter = (event) => { //this handler for is searhbox onChange
-        const searchWord = event.target.value;
-        setWordEntered(searchWord);
-
-        const newFilter = starships.filter(ship => //search in starships
-            ship.name.toLowerCase().includes(searchWord.toLowerCase()) || //by name
-            ship.model.toLowerCase().includes(searchWord.toLowerCase())  // by model
-        );
-
-        if (searchWord === "") {//is searchword empty
-            setFilteredData([]);    //if empty clear filteredData
-        } else {
-            setFilteredData(newFilter); //if not set filtered data to hook
-        }
-    };
-
 
     useEffect(() => {//getting data from swapi with all pages using promise
         const getData = async () => {
@@ -68,10 +52,26 @@ function Searcher() {
         />
     );
 
+
     const load = () => { //loadMore button event
         setLoaded(loaded + shipsCountForLoad);
     };
 
+    const handleFilter = (event) => { //this handler for is searhbox onChange
+        const searchWord = event.target.value;
+        setWordEntered(searchWord);
+
+        const newFilter = starships.filter(ship => //search in starships
+            ship.name.toLowerCase().includes(searchWord.toLowerCase()) || //by name
+            ship.model.toLowerCase().includes(searchWord.toLowerCase())  // by model
+        );
+
+        if (searchWord === "") {//is searchword empty
+            setFilteredData([]);    //if empty clear filteredData
+        } else {
+            setFilteredData(newFilter); //if not set filtered data to hook
+        }
+    };
 
 
     if (filteredData.length === 0) {//if searchbox is empty
