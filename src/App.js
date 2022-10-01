@@ -30,8 +30,8 @@ function App() {
           <div className='switch'>
             <label className='ms-2 mb-3'>
               {theme === "light" ?
-                <img className="theme-img" src="../img/light.png" /> :
-                <img className="theme-img" src="../img/dark.png" />
+                <img alt="ligtImg" className="theme-img" src="../img/light.png" /> :
+                <img alt="darkImg" className="theme-img" src="../img/dark.png" />
               }
             </label>
             <label>
