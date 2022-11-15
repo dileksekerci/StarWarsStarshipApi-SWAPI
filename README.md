@@ -10,8 +10,6 @@ and project's main goal is fetching starships from swapi named Star Wars API.
 
 `May The Force Be With You!`
 
-
-
 # React Libraries Used
 - axios
 - React Router 
@@ -36,7 +34,6 @@ Open http://localhost:3000 to view it in your browser.(port number might be diff
 All the Star Wars data you've ever wanted:
 Planets, Spaceships, Vehicles, People, Films and Species
 - https://swapi.dev/
-
 
 # Demo
  ![Screenshot](./public/img/Screenshot/Screenshot.gif)
