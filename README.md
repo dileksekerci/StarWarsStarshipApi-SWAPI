@@ -1,4 +1,4 @@
-# Star Wars Starship Api (SWAPI) - (iyzico & Patika Practicum Final Project)
+# Star Wars Starship Api (SWAPI) 
 * This project built for iyzico & Patika Practicum
 and project's main goal is fetching starships from swapi named Star Wars API.
 - Here are the project's capable of
